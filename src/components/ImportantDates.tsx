@@ -4,7 +4,7 @@ const dates = [
   { event: 'Paper Submission Deadline', date: 'June 15, 2025' },
   { event: 'Notification of Acceptance', date: 'July 30, 2025' },
   { event: 'Camera-Ready Submission', date: 'August 15, 2025' },
-  { event: 'Workshop Date', date: 'October 5, 2025' }
+  { event: 'Workshop Date', date: 'September 27, 2025' }
 ];
 
 export default function ImportantDates() {

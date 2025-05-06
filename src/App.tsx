@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import CallForPapers from "./components/CallForPapers";
@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 
 function App() {
 	return (
-		<Router basename="/LLM-MI-MICCAI-2025">
+		<Router basename="/">
 			<div className="min-h-screen bg-gray-50">
 				<Navbar />
 				<Routes>

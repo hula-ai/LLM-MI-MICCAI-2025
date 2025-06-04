@@ -33,7 +33,7 @@ export default function Home() {
             variants={fadeIn}
             custom={1}
           >
-            Large Language Models and Multimodal Large Language Models in Medical Imaging
+            Emerging LLM/LMM Applications in Medical Imaging (ELAMI)
           </motion.p>
         </motion.div>
 

@@ -154,6 +154,39 @@ export default function Home() {
             </motion.p>
           </div>
         </motion.div>
+
+        {/* Acknowledgment Section */}
+        <motion.div
+          className="mt-20 bg-gradient-to-r from-gray-100 to-white rounded-xl p-8 shadow-lg"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+        >
+          <div className="text-center">
+            <motion.h2
+              className="text-2xl font-bold text-indigo-900"
+              variants={fadeIn}
+              custom={0}
+            >
+              Acknowledgment
+            </motion.h2>
+            <motion.p
+              className="mt-4 text-lg text-gray-700"
+              variants={fadeIn}
+              custom={0.2}
+            >
+          
+            </motion.p>
+            <motion.p
+              className="mt-4 text-lg text-gray-700"
+              variants={fadeIn}
+              custom={0.3}
+            >
+              The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+            </motion.p>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

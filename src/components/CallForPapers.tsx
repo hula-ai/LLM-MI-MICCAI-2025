@@ -122,6 +122,22 @@ export default function CallForPapers() {
           </a>
         </div>
       </div>
+
+      {/* Acknowledgment Section */}
+      <div className="mt-12 border-t border-gray-200 pt-6 text-gray-700 text-base">
+        <p>
+          The{' '}
+          <a
+            href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2F"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-600 underline hover:text-indigo-800"
+          >
+            Microsoft CMT service
+          </a>{' '}
+          was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+        </p>
+      </div>
     </div>
   );
 }

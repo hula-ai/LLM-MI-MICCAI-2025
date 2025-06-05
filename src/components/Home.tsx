@@ -48,18 +48,18 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-indigo-900">About the Workshop</h2>
           <div className="mt-4 prose prose-lg text-gray-600 max-w-none">
             <p>
-            The rapid advancement of large language models (LLMs) and multimodal large language models (MLLMs) 
-            has introduced groundbreaking possibilities for advancing medical imaging and healthcare applications. 
-            These technologies, grounded in state-of-the-art generative AI, are poised to transform how clinicians 
-            and researchers interact with complex datasets, enabling novel workflows and decision-making paradigms 
-            within the medical imaging domain.
-          </p>
-          <p className="mt-4">
-            LLMs have demonstrated their ability to process and synthesize vast amounts of textual information, 
-            offering insights that assist in clinical interpretation, diagnostic reasoning, and knowledge discovery. 
-            MLLMs extend these capabilities by integrating modalities such as text, images, and real-time data streams, 
-            opening unique opportunities to enhance medical imaging tasks.
-          </p>
+              The rapid advancement of large language models (LLMs) and multimodal large language models (MLLMs)
+              has introduced groundbreaking possibilities for advancing medical imaging and healthcare applications.
+              These technologies, grounded in state-of-the-art generative AI, are poised to transform how clinicians
+              and researchers interact with complex datasets, enabling novel workflows and decision-making paradigms
+              within the medical imaging domain.
+            </p>
+            <p className="mt-4">
+              LLMs have demonstrated their ability to process and synthesize vast amounts of textual information,
+              offering insights that assist in clinical interpretation, diagnostic reasoning, and knowledge discovery.
+              MLLMs extend these capabilities by integrating modalities such as text, images, and real-time data streams,
+              opening unique opportunities to enhance medical imaging tasks.
+            </p>
           </div>
         </motion.div>
 
@@ -155,38 +155,24 @@ export default function Home() {
           </div>
         </motion.div>
 
-        {/* Acknowledgment Section */}
-        <motion.div
-          className="mt-20 bg-gradient-to-r from-gray-100 to-white rounded-xl p-8 shadow-lg"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeIn}
-        >
+        {/* Acknowledgment Section (Static with hyperlink) */}
+        <div className="mt-20 bg-gradient-to-r from-gray-100 to-white rounded-xl p-8 shadow-lg">
           <div className="text-center">
-            <motion.h2
-              className="text-2xl font-bold text-indigo-900"
-              variants={fadeIn}
-              custom={0}
-            >
-              Acknowledgment
-            </motion.h2>
-            <motion.p
-              className="mt-4 text-lg text-gray-700"
-              variants={fadeIn}
-              custom={0.2}
-            >
-          
-            </motion.p>
-            <motion.p
-              className="mt-4 text-lg text-gray-700"
-              variants={fadeIn}
-              custom={0.3}
-            >
-              The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
-            </motion.p>
+            <h2 className="text-2xl font-bold text-indigo-900">Acknowledgment</h2>
+            <p className="mt-4 text-lg text-gray-700">
+              The{' '}
+              <a
+                href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2F"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-indigo-600 underline hover:text-indigo-800"
+              >
+                Microsoft CMT service
+              </a>{' '}
+              was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+            </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

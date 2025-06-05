@@ -10,14 +10,25 @@ import Footer from "./components/Footer";
 function App() {
 	return (
 		<Router basename="/">
-			<div className="min-h-screen bg-gray-50">
+			<div className="min-h-screen bg-gray-50 flex flex-col">
 				<Navbar />
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/call-for-papers" element={<CallForPapers />} />
-					<Route path="/important-dates" element={<ImportantDates />} />
-					<Route path="/organizers" element={<Organizers />} />
-				</Routes>
+				<div className="flex-grow">
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="/call-for-papers" element={<CallForPapers />} />
+						<Route path="/important-dates" element={<ImportantDates />} />
+						<Route path="/organizers" element={<Organizers />} />
+					</Routes>
+				</div>
+
+				{/* Microsoft CMT Acknowledgment */}
+				<p className="text-xs text-center text-gray-500 px-4 py-2">
+					The Microsoft CMT service was used for managing the peer-reviewing
+					process for this conference. This service was provided for free by
+					Microsoft and they bore all expenses, including costs for Azure cloud
+					services as well as for software development and support.
+				</p>
+
 				<Footer />
 			</div>
 		</Router>

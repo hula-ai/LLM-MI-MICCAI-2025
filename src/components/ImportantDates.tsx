@@ -1,9 +1,9 @@
 import React from 'react';
 
 const dates = [
-  { event: 'Paper Submission Deadline', date: 'June 15, 2025' },
-  { event: 'Notification of Acceptance', date: 'July 30, 2025' },
-  { event: 'Camera-Ready Submission', date: 'August 15, 2025' },
+  { event: 'Paper Submission Deadline', date: 'July 22, 2025' },
+  { event: 'Notification of Acceptance', date: 'August 20, 2025' },
+  { event: 'Camera-Ready Submission', date: 'August 30, 2025' },
   { event: 'Workshop Date', date: 'September 27, 2025' }
 ];
 

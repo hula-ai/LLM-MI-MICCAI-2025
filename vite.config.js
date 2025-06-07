@@ -1,5 +1,3 @@
-
-
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
@@ -10,13 +8,15 @@ export default defineConfig({
     {
       name: "inject-cmt-comment-and-text",
       transformIndexHtml(html) {
-        // >> put your injection logic here, e.g.:
+        // >>> your injection logic here, for example:
         // return html.replace(
-        //   "</head>",
-        //   `<link rel="stylesheet" href="/custom.css" /></head>`
+        //   "</body>",
+        //   `<script src="/your-script.js"></script></body>`
         // );
+        
+        // for now just return unmodified:
         return html;
-      },
-    },  // ← note the comma here
-  ],
+      }
+    }
+  ]
 });

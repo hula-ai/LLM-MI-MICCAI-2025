@@ -11,7 +11,7 @@ export default function CallForPapers() {
         <p className="mt-2 text-indigo-700">
           All submissions should be made through the CMT platform:
           <a 
-            href="https://cmt3.research.microsoft.com/MIL3ID2020" 
+            href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FELAMI2025" 
             className="ml-2 text-indigo-600 hover:text-indigo-900 underline"
             target="_blank"
             rel="noopener noreferrer"

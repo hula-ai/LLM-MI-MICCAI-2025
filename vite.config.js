@@ -8,15 +8,9 @@ export default defineConfig({
     {
       name: "inject-cmt-comment-and-text",
       transformIndexHtml(html) {
-        // >>> your injection logic here, for example:
-        // return html.replace(
-        //   "</body>",
-        //   `<script src="/your-script.js"></script></body>`
-        // );
-        
-        // for now just return unmodified:
+        // your injection logic…
         return html;
-      }
-    }
-  ]
-});
+      }           // ← closes transformIndexHtml
+    },          // ← closes the plugin object
+  ],            // ← closes the plugins array
+});             // ← closes the defineConfig call

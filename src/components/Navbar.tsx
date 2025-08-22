@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-	{ name: "Home", href: "/" },
-	{ name: "Call for Papers", href: "/call-for-papers" },
-	{ name: "Important Dates", href: "/important-dates" },
-	{ name: "Organizers", href: "/organizers" },
+	{ name: "Home", href: "/", type: "route" },
+	{ name: "Call for Papers", href: "/call-for-papers", type: "route" },
+	{ name: "Important Dates", href: "/important-dates", type: "route" },
+	{ name: "Organizers", href: "/organizers", type: "route" },
+	{ name: "Schedules", href: "/files/schedule.pdf", type: "pdf" }, // 👈 Added here
 ];
 
 export default function Navbar() {
@@ -24,15 +25,27 @@ export default function Navbar() {
 									</span>
 								</div>
 								<div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-									{navigation.map((item) => (
-										<Link
-											key={item.name}
-											to={item.href}
-											className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900 hover:text-gray-600"
-										>
-											{item.name}
-										</Link>
-									))}
+									{navigation.map((item) =>
+										item.type === "route" ? (
+											<Link
+												key={item.name}
+												to={item.href}
+												className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900 hover:text-gray-600"
+											>
+												{item.name}
+											</Link>
+										) : (
+											<a
+												key={item.name}
+												href={item.href}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900 hover:text-gray-600"
+											>
+												{item.name}
+											</a>
+										)
+									)}
 								</div>
 							</div>
 							<div className="-mr-2 flex items-center sm:hidden">
@@ -50,15 +63,27 @@ export default function Navbar() {
 
 					<Disclosure.Panel className="sm:hidden">
 						<div className="pt-2 pb-3 space-y-1">
-							{navigation.map((item) => (
-								<Link
-									key={item.name}
-									to={item.href}
-									className="block pl-3 pr-4 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-								>
-									{item.name}
-								</Link>
-							))}
+							{navigation.map((item) =>
+								item.type === "route" ? (
+									<Link
+										key={item.name}
+										to={item.href}
+										className="block pl-3 pr-4 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+									>
+										{item.name}
+									</Link>
+								) : (
+									<a
+										key={item.name}
+										href={item.href}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="block pl-3 pr-4 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+									>
+										{item.name}
+									</a>
+								)
+							)}
 						</div>
 					</Disclosure.Panel>
 				</>

@@ -3,16 +3,20 @@ import { Link } from "react-router-dom";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
+
+const base = import.meta.env.BASE_URL.replace(/\/+$/, "");
+const scheduleHref = `${base}/Schedule.pdf`;
+
+
+
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Call for Papers", href: "/call-for-papers" },
-  { name: "Important Dates", href: "/important-dates" },
-  { name: "Organizers", href: "/organizers" },
-  // Add this item:
-  { name: "Schedule", href: new URL("Schedule.pdf", import.meta.env.BASE_URL).toString(), external: true }
-
-];
-
+	{ name: "Home", href: "/" },
+	{ name: "Call for Papers", href: "/call-for-papers" },
+	{ name: "Important Dates", href: "/important-dates" },
+	{ name: "Organizers", href: "/organizers" },
+	{ name: "Schedule", href: scheduleHref, external: true },
+  ];
+  
 export default function Navbar() {
   return (
     <Disclosure as="nav" className="bg-white shadow">

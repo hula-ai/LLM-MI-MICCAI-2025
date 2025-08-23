@@ -1,16 +1,24 @@
+
+/// <reference types="vite/client" />
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  base: "/LLM-MI-MICCAI-2025",
+  // IMPORTANT: for GitHub Pages use a trailing slash
+  // e.g., https://<user>.github.io/LLM-MI-MICCAI-2025/
+  base: "/LLM-MI-MICCAI-2025/",
   plugins: [
     react(),
     {
       name: "inject-cmt-comment-and-text",
       transformIndexHtml(html) {
-        // your injection logic…
-        return html;
-      }           // ← closes transformIndexHtml
-    },          // ← closes the plugin object
-  ],            // ← closes the plugins array
-});             // ← closes the defineConfig call
+        // Add any HTML injection here if needed
+        return html; // no-op for now
+      },
+    },
+  ],
+});
+
+

@@ -8,6 +8,9 @@ const navigation = [
   { name: "Call for Papers", href: "/call-for-papers" },
   { name: "Important Dates", href: "/important-dates" },
   { name: "Organizers", href: "/organizers" },
+  // Add this item:
+  { name: "Schedule", href: new URL("Schedule.pdf", import.meta.env.BASE_URL).toString(), external: true }
+
 ];
 
 export default function Navbar() {
